@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sapient Test</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <main>
+        <section>
+            <div class="pay">
+                <div class="pay__tabs">
+                    <ul class="pay__tabs-list">
+                        <li class="pay__tabs-item active unlocked" data-title='1'>
+                            <a href="#" class="pay__tabs-title unlocked" >You order</a>
+                        </li>
+                        <li class="pay__tabs-item " data-title='2'>
+                            <a href="#" class="pay__tabs-title " >Shipping Details</a>
+                        </li>
+                        <li class="pay__tabs-item " data-title='3'>
+                            <a href="#" class="pay__tabs-title" >Payment Details</a>
+                        </li>
+                        <li class="pay__tabs-item " data-title='4'>
+                            <a href="#" class="pay__tabs-title" >Confirmation</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="pay__content">
+                    <div class="pay__content-item active" data-tab='1'>
+                        <form action="#" class="form-1">
+                            <div class="product-img-wrap">
+                                <input type="file" id="file-input" onchange="previewFile()" accept="image/*,image/jpeg" required>
+                                <label for="file-input">
+                                    <div class="product-img">
+                                        <img src="" alt="">
+                                        <span>Change file</span>
+                                    </div>
+                                </label>
+                            </div>
+                            <div class="product-info">
+                                <fieldset>
+                                    <label>Name product</label>
+                                    <input type="text" value="" required>
+                                </fieldset>
+                                <fieldset>
+                                    <label>Price</label>
+                                    <input type="number" value="" id="price" required>
+                                </fieldset>
+                                <fieldset>
+                                    <label>Number</label>
+                                    <input type="number" value="1" id="numProd" required>
+                                </fieldset>
+                                <fieldset>
+                                    <label>Text</label>
+                                    <textarea name="textProduct" id="" cols="30" rows="10"></textarea>
+                                </fieldset>
+                                <button type="submit" >Submit</button>
+                            </div>
+                        </form>
+                        <div class="btn__steps-wrap">
+                            <a href="#" class="btn__steps prev">
+                                </a>
+                            <a href="#" class="btn__steps next">Next Step
+                                <img src="img/icons8-forward-16.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pay__content-item" data-tab='2'>
+                        <form action="#" class="form-2">
+                            
+                                <fieldset>
+                                    <label>City</label>
+                                    <input id="myInput" type="text" name="myCountry" required minlength="3" placeholder="Country">
+                                </fieldset>
+                                <fieldset>
+                                    <label>Address</label>
+                                    <input type="text" required>
+                                </fieldset>
+                                <fieldset>
+                                    <label>Phone</label>
+                                    <input type="tel" class="tel" placeholder="+38 (0xx) xxx xx xx" required  pattern=".{19,}">
+                                </fieldset>
+                                <button type="submit">Submit</button>
+                       
+                            
+                            
+                        </form>
+                        <div class="btn__steps-wrap">
+                            <a href="#" class="btn__steps prev">
+                                <img src="img/icons8-back-16.png" alt="">
+                                Previus Step
+                                </a>
+                            <a href="#" class="btn__steps next">Next Step
+                                <img src="img/icons8-forward-16.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pay__content-item" data-tab='3'>
+                        <form action="#" class="form-3">
+                            <div class="card__wrap">
+                                <div class="card">
+                                    <div class="card__logo">
+                                        <img src="img/icons8-visa-50.png" alt="">
+                                    </div>
+                                    <div class="card__chip">
+                                        <img src="img/icons8-chip-card-50.png" alt="">
+                                    </div>
+                                    <input type="text" placeholder="0000 0000 0000 0000" readonly id="card-numb">
+                                    <div class="card__info">
+                                        <input type="text" placeholder="Name" readonly id="card-name">
+                                        <input type="text" placeholder="09/24" readonly id="card-date">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card__inputs">
+                                <h3 class="card__title">Payment Details</h3>
+                                <fieldset>
+                                    <label>Name on Card</label>
+                                    <input type="text" placeholder="Arjun Kunwar" id="cardName" required>
+                                </fieldset>
+                                <fieldset>
+                                    <label>Card Number</label>
+                                    <input type="text" placeholder="4324 2342 2342 4523" id="cardNum" pattern=".{16,}" required>
+                                </fieldset>
+                                <div class="card__inputs-wrap">
+                                    <fieldset>
+                                        <label>Valid Throug</label>
+                                        <input type="text" placeholder="09/24" id="cardDate" pattern=".{4,}" required>
+                                    </fieldset>
+                                    <fieldset>
+                                        <label>CVV</label>
+                                        <input type="text" placeholder="444" id="cardCVV" maxlength="3" required>
+                                    </fieldset>
+                                </div>
+                                
+                                <button type="submit" id="btnPrice">Submit<span>$0.00</span></button>
+                            </div>
+                        </form>
+                        <div class="btn__steps-wrap">
+                            <a href="#" class="btn__steps prev">
+                                <img src="img/icons8-back-16.png" alt="">
+                                Previus Step
+                                </a>
+                            <a href="#" class="btn__steps next">Next Step
+                                <img src="img/icons8-forward-16.png" alt="">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="pay__content-item" data-tab='4'>
+                        <div class="thanx">
+                            Payment successful
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="./js/autocomplete.js"></script>
+    <script >
+        autocomplete(document.getElementById("myInput"), countries);
+    </script>
+    <script src="./js/index.js"></script>
+</body>
+</html>
